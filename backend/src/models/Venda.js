@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE
     },
     Data_fatura: {
-      type: DataTypes.DECIMAL
+      type: DataTypes.DATE
     }
   },
     {
