@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const LojaTable = sequelize.define('Dim_Fornecedores', {
+  const FornecedorTable = sequelize.define('Dim_Fornecedores', {
     ID_fornecedor: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -43,8 +43,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  LojaTable.associate = (models) => {
-    LojaTable.hasMany(models.ProdutosTable,
+  FornecedorTable.associate = (models) => {
+    FornecedorTable.hasMany(models.ProdutoTable,
     { foreignKey: 'ID_fornecedor', as: 'fornecedor' });
   };
 
